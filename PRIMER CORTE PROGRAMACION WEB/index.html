@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Ecuaciones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Calculadora de Ecuaciones Matemáticas</h1>
+
+    <div class="container">
+        
+        <h2>Mi Ecuación: </h2>
+        <img src="img/ecuacion.png" alt="Ecuación de ejemplo" style="max-width: 600px;">
+
+        <h2>Ingrese los coeficientes</h2>
+        <label for="a">a =</label>
+        <input type="number" id="a" value="1">
+        
+        <label for="b">b =</label>
+        <input type="number" id="b" value="2">
+        
+        <label for="c">c =</label>
+        <input type="number" id="c" value="3">
+        
+        <label for="d">d =</label>
+        <input type="number" id="d" value="4">
+        
+        <label for="e">e =</label>
+        <input type="number" id="e" value="5">
+
+        <h2>Rango de X</h2>
+        <label for="xMin">Mínimo X:</label>
+        <input type="number" id="xMin" value="-10">
+        
+        <label for="xMax">Máximo X:</label>
+        <input type="number" id="xMax" value="10">
+
+        <button id="calcular">Procesar</button>
+    </div>
+
+    <h2>Resultados</h2>
+    <p><strong>Valor Y Mínimo:</strong> <span id="yMin">-</span></p>
+    <p><strong>Valor Y Máximo:</strong> <span id="yMax">-</span></p>
+    <p><strong>Cortes detectados:</strong> <span id="cortes">-</span></p>
+
+    <h2>Gráfico</h2>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+
+    <h2>Valores X-Y</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Valor X</th>
+                <th>Valor Y</th>
+            </tr>
+        </thead>
+        <tbody id="tablaValores"></tbody>
+    </table>
+    
+    <!-- Cargar Google Charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        // Cargar la librería 'corechart' de Google
+        google.charts.load('current', {'packages':['corechart']});
+        // No dibujamos el gráfico aquí, solo cargamos la librería.
+    </script>
+
+    <!-- Ejecuta el archivo-->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
